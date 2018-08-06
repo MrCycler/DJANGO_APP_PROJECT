@@ -15,6 +15,10 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+#3.2 se establece cual es la direccion de la carpeta templates (esta debe ser creada por el usuario)
+TEMPLATE_DIR =os.path.join(BASE_DIR,"templates") 
+#f3.2(first_project/settings.py)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -30,6 +34,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+#1.4 Se registra la app firstapp en las app instaladas y correr
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'firstapp',
 ]
+#f1.4ft
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,10 +58,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'first_project.urls'
 
+#3.3 se añade el directorio de templates para ser referenciado
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +74,7 @@ TEMPLATES = [
         },
     },
 ]
+#f3.3(templates/first_app/pagina.html)
 
 WSGI_APPLICATION = 'first_project.wsgi.application'
 

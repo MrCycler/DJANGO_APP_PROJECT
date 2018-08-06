@@ -20,6 +20,12 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/',views.index,name='index'),
+
+    #1.3 Se importa el archivo views de first app, una llamada a la pagina principal lanza el metodo index
+    path('',views.index,name='index'),
+    #f1.3 (first_project/settings.py)
+
+    #2.2 para la ruta /firstapp se cargan otras rutas /firstapp/otras descritas en el archivo incluido
     path('firstapp/', include('firstapp.urls')),
+    #f2.2 (firstapp/urls.py)
 ]
