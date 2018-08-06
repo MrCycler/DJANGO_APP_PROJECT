@@ -19,6 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR =os.path.join(BASE_DIR,"templates") 
 #f3.2(first_project/settings.py)
 
+#4.2 se establece cual es la direccion de la carpeta static (esta debe ser creada por el usuario)
+STATIC_DIR =os.path.join(BASE_DIR,"static") 
+#f4.2(first_project/settings.py)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -127,3 +130,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#4.3 Se añade la ruta de los archivos estaticos para ser usados, En este punto ya se pueden ver los archivos
+# en la ruta /static/images/XXXX archivo
+STATICFILES_DIRS=[
+    STATIC_DIR,
+]
+
+#f4.3(templates/first_app/paginababy.html)

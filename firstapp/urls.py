@@ -12,5 +12,9 @@ urlpatterns = [
     #3.5 para la subruta /firstapp/ se ejecuta el metodo pagina_web de views.py
     path('',views.pagina_web,name='pagina_web'),
     #f3.5 (firstapp/views.py)
+
+    #4.5 para la subruta /firstapp/estatica se ejecuta el metodo muestrababy de views.py
+    path('estatica/',views.muestrababy,name='muestrababy'),
+    #f4.5 (firstapp/views.py)
     
 ]

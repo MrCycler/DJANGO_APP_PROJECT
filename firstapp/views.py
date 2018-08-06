@@ -19,6 +19,9 @@ def otro(request):
 #se usa render para renderizar la pagina html, ejecutar
 def pagina_web(request):
     my_dict ={'elementoinsertado':"Me inserto en first_app/views.py"}
-    return render(request,'firstapp/pagina.html',context=my_dict)
-#f3.6ft
+    return render(request,'first_app/pagina.html',context=my_dict)
 
+#4.6 se muestra la web con la imagen, ejecutar
+def muestrababy(request):
+    return render(request,'first_app/paginababy.html',context={})
+#f4.6ft
