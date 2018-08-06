@@ -1,5 +1,6 @@
 <!--4.4 Archivo html donde se va a renderizar la imagen (archivo estatico)
-se cargan todos los archivos, los comandos estan entre %%-->
+se cargan todos los archivos, los comandos estan entre %%
+se usan los estilos de static/css/paginababy.css-->
 <!DOCTYPE html>
 {% load staticfiles %}
 <html>
@@ -8,7 +9,7 @@ se cargan todos los archivos, los comandos estan entre %%-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/paginababy.css"%}" />
     <script src="main.js"></script>
 </head>
 <body>

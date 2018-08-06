@@ -133,6 +133,7 @@ STATIC_URL = '/static/'
 
 #4.3 Se añade la ruta de los archivos estaticos para ser usados, En este punto ya se pueden ver los archivos
 # en la ruta /static/images/XXXX archivo
+# se añaden los estilos en la carpeta static/css
 STATICFILES_DIRS=[
     STATIC_DIR,
 ]
