@@ -7,4 +7,6 @@
 #    f3.1(first_project/settings.py)
 #4- Crear y usar archivos estaticos para ser mostradas en determinadas rutas; imagenes y estilo(/firstapp/estatica)
 #   f4.1(first_project/settings.py)
+#5- Creando modelos y registrados para ser vistos por un superusuario (/admin)
+#   f5.1(firstapp/models.py)
 
