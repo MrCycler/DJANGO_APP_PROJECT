@@ -26,7 +26,7 @@ class AccessRecord(models.Model):
     date=models.DateField()
     def __str__(self):
         return str(self.date)
-#f5.2(firstapp/models.py)
+#f5.2(firstapp/admin.py)
 
 
 
