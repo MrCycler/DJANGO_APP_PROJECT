@@ -20,7 +20,7 @@ TEMPLATE_DIR =os.path.join(BASE_DIR,"templates")
 #f3.2(first_project/settings.py)
 
 #4.2 se establece cual es la direccion de la carpeta static (esta debe ser creada por el usuario)
-STATIC_DIR =os.path.join(BASE_DIR,"static") 
+STATIC_DIR =os.path.join(BASE_DIR,"staticfiles") 
 #f4.2(first_project/settings.py)
 
 # Quick-start development settings - unsuitable for production
@@ -51,12 +51,15 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+
 ]
 
 ROOT_URLCONF = 'first_project.urls'
@@ -139,3 +142,10 @@ STATICFILES_DIRS=[
 ]
 
 #f4.3(templates/first_app/paginababy.html)
+
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
